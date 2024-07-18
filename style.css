@@ -1,0 +1,148 @@
+body {
+    font-family: "Playwrite PE", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background: linear-gradient(to right, #9595ec, #adcdd7, #9cb0f8, #E6E6FA);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: gradientBackground 10s ease infinite;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background: linear-gradient(to right, #9595ec, #adcdd7, #9cb0f8, #E6E6FA);
+    }
+    50% {
+        background: linear-gradient(to right, #E6E6FA, #9cb0f8, #adcdd7, #9595ec);
+    }
+    100% {
+        background: linear-gradient(to right, #9595ec, #adcdd7, #9cb0f8, #E6E6FA);
+    }
+}
+
+.container {
+    background-color: #efefef;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.photo {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.photo img {
+    width: 100%;
+    border-radius: 24px;
+    max-height: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease;
+}
+
+.converter-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 35px;
+    font-weight: 800;
+    animation: fadeIn 2s ease;
+}
+
+.converter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: fadeIn 2s ease;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    animation: fadeIn 2s ease;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #007BFF;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: buttonPop 2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+@keyframes buttonPop {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
